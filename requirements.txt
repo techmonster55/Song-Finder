@@ -1,0 +1,17 @@
+pyrogram
+tgcrypto
+pytube
+sqlalchemy==1.3.20
+psycopg2
+youtube_dl
+youtube_search_python
+youtube_search
+requests
+ffmpeg-python
+motor
+aiofiles
+dnspython
+pymongo
+lyricsgenius
+wget
+yt_dlp
