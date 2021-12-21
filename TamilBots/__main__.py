@@ -49,10 +49,10 @@ you can also use inline for search YouTube video or song
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Support📕', url=f"https://telegram.me/EDIT_REPO"), 
+        InlineKeyboardButton('Support📕', url=f"https://telegram.me/ReeloadMedia"), 
         InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/MAKRI_SONGBOT?startgroup=true"), 
+        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/RMSongsbOT?startgroup=true"), 
         ],[     
         InlineKeyboardButton('HELPℹ️', callback_data ='cmds'),        
         InlineKeyboardButton('ABOUT😁', callback_data='about')        
@@ -162,7 +162,7 @@ async def about(bot, update):
         reply_markup=ABOUT_BUTTONS
     )
 
-OWNER_ID.append(1492186775)
+OWNER_ID.append(1257860541)
 Bot.start()
 LOGGER.info("SongPlayRoBot Is Now Working🤗🤗🤗")
 idle()
