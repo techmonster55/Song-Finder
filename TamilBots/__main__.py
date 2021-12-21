@@ -76,28 +76,28 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
     )
 MUSIC_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 SOURCE_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 YOUTUBE_BUTTON = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat=""),
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 VSONG_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 LYRICS_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
         
@@ -137,12 +137,6 @@ async def cb_handler(bot, update):
         await update.message.edit_text(
             text=YOUTUBE,
             reply_markup=YOUTUBE_BUTTON,
-            disable_web_page_preview=True
-        )
-      elif update.data == "help":
-        await update.message.edit_text(
-            text=CMDS_TEXT.format(update.from_user.mention),
-            reply_markup=CMDS_BUTTONS,
             disable_web_page_preview=True
         )
     else:
