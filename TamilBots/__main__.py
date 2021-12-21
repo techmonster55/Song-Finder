@@ -52,7 +52,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('Support📕', url=f"https://telegram.me/ReeloadMedia"), 
         InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/RMSongsbOT?startgroup=true"), 
+        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/RMSongsbot?startgroup=true"), 
         ],[     
         InlineKeyboardButton('HELPℹ️', callback_data ='cmds'),        
         InlineKeyboardButton('ABOUT😁', callback_data='about')        
@@ -137,6 +137,12 @@ async def cb_handler(bot, update):
         await update.message.edit_text(
             text=YOUTUBE,
             reply_markup=YOUTUBE_BUTTON,
+            disable_web_page_preview=True
+        )
+      elif update.data == "help":
+        await update.message.edit_text(
+            text=ABOUT_TEXT,
+            reply_markup=ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
     else:
