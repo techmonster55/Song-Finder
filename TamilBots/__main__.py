@@ -149,7 +149,7 @@ async def cb_handler(bot, update):
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):    
     await update.reply_video(
-        video="https://telegra.ph/file/64a453d2da40461767d22.mp4",
+        video="https://drive.google.com/uc?export=download&id=1Uf19SoO2lI4cCv8O3g9W3rDiBZVVLTDd",
         caption=START_TEXT.format(update.from_user.mention),            
         reply_markup=START_BUTTONS
     )
@@ -157,7 +157,7 @@ async def start(bot, update):
 @Bot.on_message(filters.private & filters.command(["about"]))
 async def about(bot, update):
     await update.reply_video(
-        video="https://telegra.ph/file/64a453d2da40461767d22.mp4",
+        video="https://drive.google.com/uc?export=download&id=1Uf19SoO2lI4cCv8O3g9W3rDiBZVVLTDd",
         caption=ABOUT_TEXT,        
         reply_markup=ABOUT_BUTTONS
     )
