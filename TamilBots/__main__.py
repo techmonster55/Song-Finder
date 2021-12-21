@@ -141,8 +141,8 @@ async def cb_handler(bot, update):
         )
       elif update.data == "help":
         await update.message.edit_text(
-            text=ABOUT_TEXT,
-            reply_markup=ABOUT_BUTTONS,
+            text=CMDS_TEXT.format(update.from_user.mention),
+            reply_markup=CMDS_BUTTONS,
             disable_web_page_preview=True
         )
     else:
