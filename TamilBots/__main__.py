@@ -138,31 +138,7 @@ async def start_command(client: Client, message: Message):
     text = message.text
     if len(text)>7:
 
-@Bot.on_message(filters.command('start') & filters.private)
-async def not_joined(client: Client, message: Message):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                "Join Channel",
-                url = client.invitelink)
-        ]
-    ]
-    except IndexError:
-        pass
 
-    await message.reply(
-        text = FORCE_MSG.format(
-                first = message.from_user.first_name,
-                last = message.from_user.last_name,
-                username = None if not message.from_user.username else '@' + message.from_user.username,
-                mention = message.from_user.mention,
-                id = message.from_user.id
-            ),
-        reply_markup = InlineKeyboardMarkup(buttons),
-        quote = True,
-        disable_web_page_preview = True
-    )
-     
      
      
 @Bot.on_callback_query()
@@ -207,7 +183,31 @@ async def cb_handler(bot, update):
         await update.message.delete()
 
 
+@Bot.on_message(filters.command('start') & filters.private)
+async def not_joined(client: Client, message: Message):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                "Join Channel",
+                url = client.invitelink)
+        ]
+    ]
+    except IndexError:
+        pass
 
+    await message.reply(
+        text = FORCE_MSG.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
+            ),
+        reply_markup = InlineKeyboardMarkup(buttons),
+        quote = True,
+        disable_web_page_preview = True
+    )
+     
 
         
 @Bot.on_message(filters.private & filters.command(["start"]))
