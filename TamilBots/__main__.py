@@ -22,11 +22,11 @@ ABOUT_TEXT = """
 Aʙᴏᴜᴛ Mᴇ
 ╭──[ 🔅 Rᴇᴇʟᴏᴀᴅ Mᴇᴅɪᴀ 🔅 ]───⍟
 │
-├🔹Dᴇᴠᴇʟᴏᴘᴇʀ : Nᴏʙᴏᴅʏ
+├🔹Dᴇᴠᴇʟᴏᴘᴇʀ : [Nᴏʙᴏᴅʏ](https://t.me/n_ob_od_y)
 │
-├🔹Cʜᴀɴɴᴇʟ : Rᴇᴇʟᴏᴀᴅ Mᴇᴅɪᴀ (https://t.me/reeloadmedia)
+├🔹Cʜᴀɴɴᴇʟ : [Rᴇᴇʟᴏᴀᴅ Mᴇᴅɪᴀ](https://t.me/ReeloadMedia)
 │
-├🔸Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ : RMCʜᴀᴛs (https://t.me/RMChats)
+├🔸Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ : [RMCʜᴀᴛs](https://t.me/ReeloadMediaChats)
 │
 ╰─────────[ 😎 ]────────⍟
 """
@@ -49,10 +49,10 @@ you can also use inline for search YouTube video or song
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Support📕', url=f"https://telegram.me/EDIT_REPO"), 
+        InlineKeyboardButton('Support📕', url=f"https://telegram.me/ReeloadMedia"), 
         InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/MAKRI_SONGBOT?startgroup=true"), 
+        InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/RMSongsbot?startgroup=true"), 
         ],[     
         InlineKeyboardButton('HELPℹ️', callback_data ='cmds'),        
         InlineKeyboardButton('ABOUT😁', callback_data='about')        
@@ -76,28 +76,28 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
     )
 MUSIC_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 SOURCE_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 YOUTUBE_BUTTON = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat=""),
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 VSONG_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
 LYRICS_BUTTON = InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='help')
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
         
@@ -149,7 +149,7 @@ async def cb_handler(bot, update):
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):    
     await update.reply_video(
-        video="https://telegra.ph/file/64a453d2da40461767d22.mp4",
+        video="https://drive.google.com/uc?export=download&id=1VIGuX12MHTLhK3lyl2QSeTTxYsn6xJ34",
         caption=START_TEXT.format(update.from_user.mention),            
         reply_markup=START_BUTTONS
     )
@@ -157,12 +157,12 @@ async def start(bot, update):
 @Bot.on_message(filters.private & filters.command(["about"]))
 async def about(bot, update):
     await update.reply_video(
-        video="https://telegra.ph/file/64a453d2da40461767d22.mp4",
+        video="https://drive.google.com/uc?export=download&id=1VIGuX12MHTLhK3lyl2QSeTTxYsn6xJ34",
         caption=ABOUT_TEXT,        
         reply_markup=ABOUT_BUTTONS
     )
 
-OWNER_ID.append(1492186775)
+OWNER_ID.append(1257860541)
 Bot.start()
 LOGGER.info("SongPlayRoBot Is Now Working🤗🤗🤗")
 idle()
