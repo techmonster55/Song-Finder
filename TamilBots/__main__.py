@@ -10,6 +10,7 @@ from TamilBots import app as Bot
 from TamilBots import  LOGGER
 from TamilBots.TamilBots import ignore_blacklisted_users
 from TamilBots.sql.chat_sql import add_chat_to_db
+from bot import Bot
 
 
 START_TEXT = """ Hai {}, 
@@ -184,3 +185,5 @@ OWNER_ID.append(1257860541)
 Bot.start()
 LOGGER.info("SongPlayRoBot Is Now Working🤗🤗🤗")
 idle()
+
+Bot().run()
