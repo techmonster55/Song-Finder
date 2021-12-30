@@ -65,7 +65,7 @@ async def inline(client: Client, query: InlineQuery):
 
 @Bot.on_message(filters.command("lyrics"))
 async def lrsearch(_, message: Message):  
-    m = await message.reply_text("[🔎]https://drive.google.com/uc?export=download&id=1UMY4fXMks4-OtG1Ilp8qUJe1E3lbUqlj)Searching Lyrics🔍")
+    m = await message.reply_text("[🔎]https://telegra.ph/file/64a453d2da40461767d22.mp4)Searching Lyrics🔍")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
