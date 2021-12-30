@@ -2,6 +2,8 @@ from config import OWNER_ID
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from TamilBots.modules import *
 from pyrogram import idle, filters
+from config import FORCE_SUB_CHANNEL, ADMINS
+from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.types import InlineKeyboardButton
 from TamilBots import app as Bot 
@@ -100,7 +102,23 @@ LYRICS_BUTTON = InlineKeyboardMarkup(
             InlineKeyboardButton('👩‍🦯 Back', callback_data='cmds')
         ]]
     )
-        
+
+async def is_subscribed(filter, client, update):
+    if not FORCE_SUB_CHANNEL:
+        return True
+    user_id = update.from_user.id
+    if user_id in ADMINS:
+        return True
+    try:
+        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
+    except UserNotParticipant:
+        return False
+
+    if not member.status in ["creator", "administrator", "member"]:
+        return False
+    else:
+        return True
+
 @Bot.on_callback_query()
 async def cb_handler(bot, update):
     if update.data == "home":
