@@ -137,10 +137,6 @@ async def start_command(client: Client, message: Message):
         pass
     text = message.text
     if len(text)>7:
-
-
-     
-     
 @Bot.on_callback_query()
 async def cb_handler(bot, update):
     if update.data == "home":
