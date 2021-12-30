@@ -1,3 +1,9 @@
+import os
+import asyncio
+from pyrogram import Client, filters, __version__
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram.errors import FloodWait, InputUserDeactivated+
+
 from config import OWNER_ID
 from pyrogram.types.bots_and_keyboards import reply_keyboard_markup
 from TamilBots.modules import *
@@ -11,7 +17,9 @@ from TamilBots import  LOGGER
 from TamilBots.TamilBots import ignore_blacklisted_users
 from TamilBots.sql.chat_sql import add_chat_to_db
 from bot import Bot
-
+from bot import Bot
+from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID
+from helper_func import subscribed, get_messages
 
 START_TEXT = """ Hai {}, 
 Iam a song download Bot 🙂
@@ -119,7 +127,44 @@ async def is_subscribed(filter, client, update):
         return False
     else:
         return True
+@Bot.on_message(filters.command('start') & filters.private & subscribed)
+async def start_command(client: Client, message: Message):
+    id = message.from_user.id
+    user_name = '@' + message.from_user.username if message.from_user.username else None
+    try:
+        await add_user(id, user_name)
+    except:
+        pass
+    text = message.text
+    if len(text)>7:
 
+@Bot.on_message(filters.command('start') & filters.private)
+async def not_joined(client: Client, message: Message):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                "Join Channel",
+                url = client.invitelink)
+        ]
+    ]
+    except IndexError:
+        pass
+
+    await message.reply(
+        text = FORCE_MSG.format(
+                first = message.from_user.first_name,
+                last = message.from_user.last_name,
+                username = None if not message.from_user.username else '@' + message.from_user.username,
+                mention = message.from_user.mention,
+                id = message.from_user.id
+            ),
+        reply_markup = InlineKeyboardMarkup(buttons),
+        quote = True,
+        disable_web_page_preview = True
+    )
+     
+     
+     
 @Bot.on_callback_query()
 async def cb_handler(bot, update):
     if update.data == "home":
