@@ -19,16 +19,16 @@ Hey {} This are this bots power🙂
 """
 
 ABOUT_TEXT = """
-✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵✵
-╔════❰ 𝐀𝐁𝐎𝐔𝐓 ❱═❍⊱❁۪۪
-║╭━━━━━━━━━━━━━━━➣ 
-║ 𝙈𝙔𝙉𝘼𝙈𝙀-𝐌𝐀𝐊𝐑𝐈_𝐒𝐎𝐍𝐆𝐁𝐎𝐓 
-║┣⪼𝓓𝓮𝓿𝓸𝓵𝓸𝓹𝓮𝓻 -[𝐌𝐀𝐊𝐑𝐈](https://t.me/blesson_3)
-║┣⪼ 𝓛𝓲𝓫𝓻𝓪𝓻𝓻𝔂 - [𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼](https://pyrogram.org)
-║┣⪼ 𝓛𝓪𝓷𝓰𝓾𝓪𝓰𝓮 - [𝙿𝚈𝚃𝙷𝙾𝙽 𝟹](https://python.org)
-║┣⪼ 𝓑𝓸𝓽 𝓼𝓮𝓻𝓿𝓮𝓻 -  [𝙷𝙴𝚁𝙾𝙺𝚄](https://heroku.com)
-║┣⪼ 𝓑𝓾𝓲𝓵𝓭 𝓢𝓽𝓪𝓽𝓾𝓼 - v1.0.1 [ 𝙱𝙴𝚃𝙰 ]
-║╰━━━━━━━━━━━━━━━➣ ╚══════════════════❍⊱❁۪۪
+Aʙᴏᴜᴛ Mᴇ
+╭──[ 🔅 Rᴇᴇʟᴏᴀᴅ Mᴇᴅɪᴀ 🔅 ]───⍟
+│
+├🔹Dᴇᴠᴇʟᴏᴘᴇʀ : Nᴏʙᴏᴅʏ
+│
+├🔹Cʜᴀɴɴᴇʟ : Rᴇᴇʟᴏᴀᴅ Mᴇᴅɪᴀ (https://t.me/reeloadmedia)
+│
+├🔸Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ : RMCʜᴀᴛs (https://t.me/RMChats)
+│
+╰─────────[ 😎 ]────────⍟
 """
 MUSIC = """ **🎧MUSIC**
 You can also use this feature in group too
