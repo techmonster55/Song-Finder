@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 import asyncio
 import os
 from pytube import YouTube
@@ -44,7 +44,7 @@ async def song(client, message):
         LOGGER.error(ex)
         return ""
     rename = os.rename(download, f"{str(user_id)}.mp3")
-    await app.send_chat_action(message.chat.id, "upload_audio")
+    await app.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_AUDIO)
     await app.send_audio(
         chat_id=message.chat.id,
         audio=f"{str(user_id)}.mp3",
@@ -80,7 +80,7 @@ async def song(client, message):
         LOGGER.error(ex)
         return ""
     rename = os.rename(download, f"{str(user_id)}.mp3")
-    await app.send_chat_action(message.chat.id, "upload_audio")
+    await app.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_AUDIO)
     await app.send_audio(
         chat_id=message.chat.id,
         audio=f"{str(user_id)}.mp3",
@@ -116,7 +116,7 @@ async def song(client, message):
         LOGGER.error(ex)
         return ""
     rename = os.rename(download, f"{str(user_id)}.mp3")
-    await app.send_chat_action(message.chat.id, "upload_audio")
+    await app.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_AUDIO)
     await app.send_audio(
         chat_id=message.chat.id,
         audio=f"{str(user_id)}.mp3",
@@ -153,7 +153,7 @@ async def song(client, message):
         LOGGER.error(ex)
         return ""
     rename = os.rename(download, f"{str(user_id)}.mp3")
-    await app.send_chat_action(message.chat.id, "upload_audio")
+    await app.send_chat_action(message.chat.id, enums.ChatAction.UPLOAD_AUDIO)
     await app.send_audio(
         chat_id=message.chat.id,
         audio=f"{str(user_id)}.mp3",
