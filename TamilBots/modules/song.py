@@ -51,7 +51,7 @@ async def song(client, message):
         duration=int(yt.length),
         title=str(yt.title),
         performer=str(yt.author),
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=message.id,
     )
     await status.delete()
     os.remove(f"{str(user_id)}.mp3")
@@ -87,7 +87,7 @@ async def song(client, message):
         duration=int(yt.length),
         title=str(yt.title),
         performer=str(yt.author),
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=message.id,
     )
     await status.delete()
     os.remove(f"{str(user_id)}.mp3")
@@ -123,7 +123,7 @@ async def song(client, message):
         duration=int(yt.length),
         title=str(yt.title),
         performer=str(yt.author),
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=message.id,
     )
     await status.delete()
     os.remove(f"{str(user_id)}.mp3")
@@ -160,7 +160,7 @@ async def song(client, message):
         duration=int(yt.length),
         title=str(yt.title),
         performer=str(yt.author),
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=message.id,
     )
     await status.delete()
     os.remove(f"{str(user_id)}.mp3")
