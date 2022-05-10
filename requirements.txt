@@ -14,4 +14,4 @@ dnspython
 pymongo
 lyricsgenius
 wget
-yt_dlp
+git+https://github.com/asmsafone/downloader
